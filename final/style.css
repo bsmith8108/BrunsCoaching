@@ -198,7 +198,7 @@ background-color:green;
 	}
 
 	.js .ps-header {
-		height: 50px;
+		height: 0px;
 	}
 
 	.js .ps-header h1 {
@@ -209,26 +209,27 @@ background-color:green;
 
 	.js .ps-slides {
 		bottom: 320px;
-		top: 50px;
+		top: 10px;
 	}
 
 	.js .ps-slidewrapper {
-		top:50px;
+		top:0px;
 	}
 	.js .ps-slidewrapper > nav {
-		height: 100px;
+		height: 50px;
 	}
 	.js .ps-slidewrapper > nav a {
 		padding:0px;
 	}
 	.js .ps-contentwrapper {
-		top: auto;
-		height: 220px;
+		top: 200px;
+		height: 500px;
 		bottom: 100px;
 	}
 
 	.js .ps-content {
 		padding: 10px;
+		overflow:hidden;
 	}
 
 	.js .ps-content h2 {
@@ -238,21 +239,12 @@ background-color:green;
 		padding-top: 0;
 	}
 
-	.js .ps-content span.ps-price {
-		font-size: 18px;
-		width: 50px;
-		height: 50px;
-		line-height: 50px;
-		font-weight: 700;
-		margin-bottom: 0;
-	}
-
 	.js .ps-content p {
 		line-height: 20px;
 		border: none;
 		padding: 5px 10px;
-		height: 80px;
-		overflow-y: scroll;
+		height: 100px;
+		overflow-y:scroll;
 	}
 
 	.js .ps-content a:last-child {
