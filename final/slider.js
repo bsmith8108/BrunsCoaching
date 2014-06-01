@@ -44,57 +44,33 @@ var Slider = (function() {
 
 			$currentItem.css( initCSS );
 			$currentSlide.css( initCSS );
-			
-			// update nav images
-			// updateNavImages();
-
-			// initialize some events
 			initEvents();
 
 		},
 		initEvents = function() {
-
 			$navhome.on( 'click', function( event ) {
-
 				if( !isAnimating ) {
-					
 					slide( 'home' );
-				
 				}
 				return false;
-
 			} );
-
 			$navabout.on( 'click', function( event ) {
-
 				if( !isAnimating ) {
-					
 					slide( 'about' );
-				
 				}
 				return false;
-
 			} );
 			$navcoaching.on( 'click', function( event ) {
-
 				if( !isAnimating ) {
-					
 					slide( 'coaching' );
-				
 				}
 				return false;
-
 			} );
-
 			$navcontact.on( 'click', function( event ) {
-
 				if( !isAnimating ) {
-					
 					slide( 'contact' );
-				
 				}
 				return false;
-
 			} );
 			// transition end event
 			$items.on( transEndEventName, removeTransition );
@@ -102,38 +78,27 @@ var Slider = (function() {
 			
 		},
 		removeTransition = function() {
-
 			isAnimating = false;
 			$(this).removeClass('ps-move');
-
 		},
+		
 		slide = function( dir ) {
-
 			isAnimating = true;
-
 			var $currentItem = $items.eq( current ),
 				$currentSlide = $slides.eq( current );
 
 			// update current value
 			if( dir === 'home' ) {
-
 				current = 0;
-
 			}
 			else if( dir === 'about' ) {
-
-				current = 1;
-
+				current = 2;
 			}
 			else if( dir === 'coaching' ) {
-
-				current = 2;
-
+				current = 1;
 			}
 			else if( dir === 'contact' ) {
-
 				current = 3;
-
 			}
 				// new item that will be shown
 			var $newItem = $items.eq( current ),
@@ -152,7 +117,6 @@ var Slider = (function() {
 			} );
 
 			setTimeout( function() {
-
 				// move the current item and slide to the top or bottom depending on the direction 
 				$currentItem.addClass( 'ps-move' ).css( {
 					top : ( dir === 'next' ) ? '100%' : '-100%',
@@ -170,15 +134,10 @@ var Slider = (function() {
 
 				// if no CSS transitions set the isAnimating flag to false
 				if( !support ) {
-
 					isAnimating = false;
-
 				}
 
 			}, 0 );
-
-			// update nav images
-			updateNavImages();
 
 		};
 

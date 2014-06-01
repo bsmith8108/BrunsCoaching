@@ -33,7 +33,7 @@
 
 .ps-header {
 	top: -30px;
-	left: 0px;
+	left: 250px;
 	height: 150px;
 	width:75%;
 	z-index: 1001;
@@ -55,6 +55,7 @@
 	bottom: 0px;
 	z-index: 1000;
 	width:75%;
+	left:250px;
 }
 
 .ps-content {
@@ -127,7 +128,7 @@
 }
 
 .ps-slidewrapper {
-	right: 0px;
+	left: 0px;
 	top: 0px;
 	height: 100%;
 	overflow: hidden;
@@ -163,8 +164,13 @@
 	padding-bottom:40%;
 	padding-left:25%;
 	padding-right:25%;
-	font-size:30px;
-	text-align:center;
+	font-size:25px;
+}
+
+.ps-slidewrapper > nav > a > .subtitle {
+font-size:12px;
+text-align:left;
+margin:5px;
 }
 
 #home {
