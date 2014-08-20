@@ -13,6 +13,8 @@ var Slider = (function() {
 		$navhome = $slidewrapper.find( 'nav > a#home' ),
 		$navcoaching = $slidewrapper.find( 'nav > a#coaching' ),
 		$navabout = $slidewrapper.find( 'nav > a#about' ),
+		$navfaq = $slidewrapper.find( 'nav > a#faq' ),
+		$navtestimonials = $slidewrapper.find( 'nav > a#testimonials' ),
 		$navcontact = $slidewrapper.find( 'nav > a#contact' ),
 		// current index for items and slides
 		current = 0,
@@ -66,6 +68,18 @@ var Slider = (function() {
 				}
 				return false;
 			} );
+			$navfaq.on( 'click', function( event ) {
+				if( !isAnimating ) {
+					slide( 'faq' );
+				}
+				return false;
+			} );
+			$navtestimonials.on( 'click', function( event ) {
+				if( !isAnimating ) {
+					slide( 'testimonials' );
+				}
+				return false;
+			} );
 			$navcontact.on( 'click', function( event ) {
 				if( !isAnimating ) {
 					slide( 'contact' );
@@ -97,8 +111,14 @@ var Slider = (function() {
 			else if( dir === 'coaching' ) {
 				current = 1;
 			}
-			else if( dir === 'contact' ) {
+			else if( dir === 'faq' ) {
 				current = 3;
+			}
+			else if( dir === 'testimonials' ) {
+				current = 4;
+			}
+			else if( dir === 'contact' ) {
+				current = 5;
 			}
 				// new item that will be shown
 			var $newItem = $items.eq( current ),
